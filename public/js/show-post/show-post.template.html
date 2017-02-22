@@ -1,0 +1,32 @@
+<div class="nav">
+  <div class="pull-right">
+    <button ui-sref="createPost" type="button" name="button">Create New Post</button>
+  </div>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active">
+      <input type="search" class="form-control input-sm search-form" placeholder="Filter" ng-model="search">
+    </li>
+    <li class="dropdown" ng-init="sort='-created_at'; sortName='Date'">
+      <a href="#"
+      class="dropdown-toggle"
+      data-toggle="dropdown"
+      role="button"
+      aria-haspopup="true"
+      aria-expanded="false">Sort By {{ $ctrl.sortName }}<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a ng-click="sort='-created_at'; sortName='Date';">Date</a></li>
+        <li><a ng-click="sort='title'; sortName='Title'">Title</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div class="main">
+  <div ng-repeat="post in $ctrl.posts | filter:search | orderBy:sort">
+    <p>{{post.title}}</p>
+    <img src="{{post.item_image}}"/>
+    <p>{{post.description}}</p>
+    <p>{{post.price}}</p>
+    <button ng-click="$ctrl.remove(post)" type="button" name="button">Delete</button>
+    <button ui-sref="editPost({editId: post.id})" type="button" name="button">Edit</button>
+  </div>
+</div>
