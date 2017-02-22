@@ -24,6 +24,7 @@
       });
     }
 
+    //Doesnt actually work? Need to connect to delete route
     function remove(post) {
       console.log(post);
       var index = vm.posts.indexOf(post);
