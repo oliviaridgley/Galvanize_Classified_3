@@ -1,3 +1,35 @@
+.nav {
+  margin-bottom: 25px;
+  margin-top: 10px;
+  background: rgba(75, 119, 118, 0.9);
+}
+
+.nav-pills {
+  background: rgba(75, 119, 118, 0.3);
+  padding: 10px 25px 10px 25px;
+}
+
 .postCards {
   border: 1px solid black;
+  /*margin: 5px;*/
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.postCardsImg {
+  width: 150px;
+}
+
+.dropdown-toggle {
+  color: black;
+}
+
+.btnPlus {
+  background-color: rgba(75, 119, 118, 0.6);
+}
+
+.center-block {
+  /*display: block;*/
+  margin-left: auto;
+  margin-right: auto;
 }
